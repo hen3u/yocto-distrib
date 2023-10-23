@@ -32,7 +32,7 @@ repos:
     refspec: kirkstone
 
   meta-diy:
-    url: https://github.com/hen3u/meta-diy.git 
+    url: git@github.com:hen3u/meta-diy.git
     path: layers/meta-diy
     refspec: master
 

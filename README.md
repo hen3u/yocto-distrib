@@ -9,6 +9,32 @@
 ## Installation
 
 ```sh
+$ sudo apt install kas
+`̀``
+
+
+### img.xz
+```sh
+xz -dc 2023-05-03-raspios-bullseye-armhf-lite.img.xz | sudo dd bs=4M of=/dev/sdb status=progress && sync
+
+```
+
+Troubleshoot
+```
+# user pi was removded for security reason
+echo 'mypassword' | openssl passwd -6 -stdin
+# add the following line to userconf.txt in the boot partition
+pi:$6$c70VpvPsVNCG0YR5$l5vWWLsLko9Kj65gcQ8qvMkuOoRkEagI90qi3F/Y7rm8eNYZHW8CY6BOIKwMH7a3YYzZYL90zf304cAHL
+```
+
+### wic.bz2
+```sh
+$ umount /dev/sdb*
+$ sudo bmaptool copy build/tmp/deploy/images/raspberrypi3/rpi-diy-image-raspberrypi3-20230716134436.rootfs.wic.bz2 /dev/sdb && sync
+$ sudo ip address add 192.168.99.37/24 dev eth0
+```
+
+```sh
 $ mkdir -p ~/rpi/sources
 $ cd ~/rpi/sources
 $ git clone -b rocko git://git.yoctoproject.org/poky
@@ -59,6 +85,10 @@ $ bitbake rpi-basic-image
 ```sh
 $ sudo dd if=~/rpi/rpi-build/tmp/deploy/images/raspberrypi3/rpi-basic-image-raspberrypi3.rpi-sdimg of=/dev/sdX bs=4M
 ```
+
+# Hod to compile a dts
+sudo apt install device-tree-compiler
+dtc -O dtb -o out.dtbo tft35a-overlay.dts
 
 ## References
 [1] https://raspinterest.wordpress.com/2016/11/30/yocto-project-on-raspberry-pi-3/  

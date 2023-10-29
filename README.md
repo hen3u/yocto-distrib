@@ -12,6 +12,17 @@
 $ sudo apt install kas
 `̀``
 
+## Build prod
+```sh
+$ kas build kas-rpi3.yml
+```
+
+## Build dev
+```sh
+$ kas build kas-qemuarm.yml
+$ kas shell kas-qemuarm.yml -c 'runqemu nographic'
+# To quit ctrl-a + x
+`̀``
 
 ### img.xz
 ```sh

@@ -101,6 +101,16 @@ $ sudo dd if=~/rpi/rpi-build/tmp/deploy/images/raspberrypi3/rpi-basic-image-rasp
 sudo apt install device-tree-compiler
 dtc -O dtb -o out.dtbo tft35a-overlay.dts
 
+# troubleshoot
+```bash
+# pyinotify.WatchManagerError: add_watch: cannot watch ./yocto-distrib/layers/meta-diy/conf WD=-1, Errno=No space left on device (ENOSPC)
+sysctl -n fs.inotify.max_user_watches
+# cat /proc/sys/fs/inotify/max_user_watches
+# 60105
+sysctl fs.inotify.max_user_watches=524288
+
+```
+
 ## References
 [1] https://raspinterest.wordpress.com/2016/11/30/yocto-project-on-raspberry-pi-3/  
 [2] https://github.com/cosmo0920/rpi3-yocto-rocko  

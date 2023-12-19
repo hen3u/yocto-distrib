@@ -2,7 +2,7 @@ header:
   version: 1
 
 machine: raspberrypi3
-distro: poky
+distro: diy
 target:
   - rpi-diy-image
 

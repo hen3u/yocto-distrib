@@ -2,7 +2,7 @@ header:
   version: 1
 
 machine: qemuarm
-distro: poky
+distro: diy
 target:
   - rpi-diy-image
 

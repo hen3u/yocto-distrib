@@ -1,7 +1,7 @@
 header:
   version: 1
 
-machine: raspberrypi3
+machine: raspberrypi3-64
 distro: diy
 target:
   - rpi-diy-image

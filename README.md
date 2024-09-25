@@ -9,7 +9,8 @@
 ## Installation
 
 ```sh
-$ sudo apt install kas
+$ sudo apt install kas chrpath diffstat lz4 zstd -y
+$ sudo locale-gen en_US.UTF-8
 `̀``
 
 ## Build prod

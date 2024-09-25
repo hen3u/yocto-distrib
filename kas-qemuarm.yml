@@ -31,11 +31,6 @@ repos:
     path: layers/meta-raspberrypi
     refspec: scarthgap
 
-  meta-rust:
-    url: https://github.com/meta-rust/meta-rust.git
-    path: layers/meta-rust
-    refspec: master
-
   meta-diy:
     url: git@github.com:hen3u/meta-diy.git
     path: layers/meta-diy

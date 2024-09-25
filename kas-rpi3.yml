@@ -10,7 +10,7 @@ repos:
   poky:
     url: https://git.yoctoproject.org/git/poky
     path: layers/poky
-    refspec: kirkstone
+    refspec: scarthgap
     layers:
       meta:
       meta-poky:
@@ -19,7 +19,7 @@ repos:
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
     path: layers/meta-openembedded
-    refspec: kirkstone
+    refspec: scarthgap
     layers:
       meta-oe:
       meta-python:
@@ -29,7 +29,7 @@ repos:
   meta-raspberrypi:
     url: https://git.yoctoproject.org/git/meta-raspberrypi
     path: layers/meta-raspberrypi
-    refspec: kirkstone
+    refspec: scarthgap
 
   meta-rust:
     url: https://github.com/meta-rust/meta-rust.git

@@ -37,8 +37,6 @@ repos:
     refspec: master
 
 bblayers_conf_header:
-  my-extra-conf: |
-    BSPDIR := "${@os.path.abspath(os.path.dirname(d.getVar('FILE', True)) + '/../..')}"
   standard: |
     POKY_BBLAYERS_CONF_VERSION = "2"
     BBPATH = "${TOPDIR}"

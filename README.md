@@ -9,12 +9,13 @@
 ## Installation
 
 ```sh
-$ sudo apt install kas chrpath diffstat lz4 zstd -y
+$ sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 python3-subunit zstd liblz4-tool file locales libacl1
 $ sudo locale-gen en_US.UTF-8
 `̀``
 
 ## Build prod
 ```sh
+$ sudo apt install kas -y
 $ kas build kas-rpi3.yml
 ```
 
@@ -116,4 +117,4 @@ sysctl fs.inotify.max_user_watches=524288
 [1] https://raspinterest.wordpress.com/2016/11/30/yocto-project-on-raspberry-pi-3/  
 [2] https://github.com/cosmo0920/rpi3-yocto-rocko  
 [3] http://kernelhacks.com/raspberry-pi-3-with-yocto/  
-
+[4] https://docs.yoctoproject.org/ref-manual/system-requirements.html

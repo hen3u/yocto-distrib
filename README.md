@@ -26,10 +26,12 @@ $ kas shell kas-qemuarm.yml -c 'runqemu nographic'
 # To quit ctrl-a + x
 `̀``
 
-### img.xz
+### RaspiOS quick debug
 ```sh
-xz -dc 2023-05-03-raspios-bullseye-armhf-lite.img.xz | sudo dd bs=4M of=/dev/sdb status=progress && sync
-
+xz -dc 2023-12-11-raspios-bookworm-arm64-lite.img.xz | sudo dd bs=4M of=/dev/sdb status=progress && sync
+touch ${HOME}/boot/ssh
+touch ${HOME}/boot/userconf
+touch ${HOME}/root/etc/network/interfaces/interfaces.d/eth0
 ```
 
 Troubleshoot
